@@ -1,0 +1,47 @@
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+
+    private String[] localDataSet;
+
+    public CustomAdapter(String[] dataSet) {
+        this.localDataSet = dataSet;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row, viewGroup, false);
+
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+
+        String title = localDataSet[position];
+        viewHolder.txt_view.setText(title);
+    }
+
+    
+    @Override
+    public int getItemCount() {
+        return localDataSet.length;
+    }
+    
+    
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView img_icon;
+        TextView txt_view;
+
+        public ViewHolder(View view) {
+            super(view);
+            
+            img_icon = (ImageView)view.findViewById(R.id.profile);
+            txt_view = (TextView)view.findViewById(R.id.name);
+            
+        }
+        
+    }
+    
+    
+}
