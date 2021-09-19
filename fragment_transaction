@@ -1,0 +1,2 @@
+Fragment my_fragment = new your_fragment_class();
+getSupportFragmentManager().beginTransaction().replace(R.id.frame_view,my_fragment).commit();
