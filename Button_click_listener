@@ -1,0 +1,8 @@
+button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            // code to be executed after the button is clicked
+
+            }
+        });
