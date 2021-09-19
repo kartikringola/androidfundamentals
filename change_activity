@@ -1,0 +1,8 @@
+Intent change_activity = new Intent(first_activity.this, second_activity.class);
+startActivity(change_activity);
+
+// or in a short line of code
+
+startActivity(new Intent(first_activity.this,second_activity.class));
+
+
